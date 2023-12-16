@@ -8,10 +8,10 @@ builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 app.UseRouting();
+
 app.MapControllerRoute(
     name: "default",
-    pattern: "{conteroller=home}/{action=index}/{id?}"
-    );
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
 
