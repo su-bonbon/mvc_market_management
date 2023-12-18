@@ -9,9 +9,6 @@ namespace WebApp.Controllers
             return "Hello World from Action Mothod.";
         }
 
-        public string Error()
-        {
-            return "I have an Error here.";
-        }
+        
     }
 }
