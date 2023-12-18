@@ -9,9 +9,12 @@ namespace WebApp.Controllers
             return View();
         }
 
-        public IActionResult Edit(int id)
+        public IActionResult Edit(int? id)
         {
-            return new ContentResult { Content = id.ToString() };
+            if (id.HasValue)
+                return new ContentResult { Content = id.ToString() };
+            else
+                return new ContentResult { Content = "null content" };
         }
     }
 }
