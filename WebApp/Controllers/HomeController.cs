@@ -4,9 +4,9 @@ namespace WebApp.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        public IActionResult Index()
         {
-            return "Hello World from Action Mothod.";
+            return View();
         }
 
         
