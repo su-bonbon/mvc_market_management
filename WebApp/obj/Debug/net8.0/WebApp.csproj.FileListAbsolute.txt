@@ -24,3 +24,5 @@ C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\refint\WebApp.dl
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\WebApp.pdb
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\WebApp.genruntimeconfig.cache
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\ref\WebApp.dll
+C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\WebApp.RazorAssemblyInfo.cache
+C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\WebApp.RazorAssemblyInfo.cs
