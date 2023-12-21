@@ -19,9 +19,9 @@
 			@foreach (var category in Model)
 			{
 				<tr>
-					<tr>@category.Name</tr>
-					<tr>@category.Description</tr>
-					<tr><a class="btn btn-link" href="@($"/categories/edit/{category.CategoryId}")">Edit</a></tr>
+					<td>@category.Name</td>
+					<td>@category.Description</td>
+					<td><a class="btn btn-link" href="@($"/categories/edit/{category.CategoryId}")">Edit</a></td>
 				</tr>
 			}
 		</tbody>
