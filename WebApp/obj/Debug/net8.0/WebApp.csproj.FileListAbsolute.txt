@@ -1,5 +1,6 @@
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\bin\Debug\net8.0\appsettings.json
+C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\bin\Debug\net8.0\WebApp.staticwebassets.runtime.json
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\bin\Debug\net8.0\WebApp.exe
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\bin\Debug\net8.0\WebApp.deps.json
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\bin\Debug\net8.0\WebApp.runtimeconfig.json
@@ -10,6 +11,8 @@ C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\WebApp.AssemblyI
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\WebApp.AssemblyInfo.cs
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\WebApp.csproj.CoreCompileInputs.cache
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\WebApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\WebApp.RazorAssemblyInfo.cache
+C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\WebApp.RazorAssemblyInfo.cs
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\WebApp.sourcelink.json
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\staticwebassets.development.json
@@ -24,6 +27,3 @@ C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\refint\WebApp.dl
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\WebApp.pdb
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\WebApp.genruntimeconfig.cache
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\ref\WebApp.dll
-C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\WebApp.RazorAssemblyInfo.cache
-C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\obj\Debug\net8.0\WebApp.RazorAssemblyInfo.cs
-C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\bin\Debug\net8.0\WebApp.staticwebassets.runtime.json
