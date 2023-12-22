@@ -29,8 +29,14 @@ namespace WebApp.Controllers
            return View(category);
         }
 
+		[HttpGet]
+		public IActionResult Add()
+		{
+			return View();
+		}
+
 		[HttpPost]
-		public IActionResult Add(Category category)
+		public IActionResult Add([FromForm]Category category)
 		{
 			if (ModelState.IsValid)
 			{
@@ -39,5 +45,6 @@ namespace WebApp.Controllers
 			}
 			return View(category);
 		}
+
 	}
 }
