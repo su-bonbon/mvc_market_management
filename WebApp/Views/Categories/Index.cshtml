@@ -12,6 +12,8 @@
 				<th>Name</th>
 				<th>Description</th>
 				<th></th>
+				<th></th>
+
 			</tr>
 		</thead>
 		<tbody>
@@ -21,6 +23,7 @@
 					<td>@category.Name</td>
 					<td>@category.Description</td>
 					<td><a class="btn btn-link" asp-controller="categories" asp-action="edit" asp-route-id="@category.CategoryId">Edit</a></td>
+					<td><a class="btn btn-link" asp-controller="categories" asp-action="delete" asp-route-categoryid="@category.CategoryId"></a></c></td>
 				</tr>
 			}
 		</tbody>
