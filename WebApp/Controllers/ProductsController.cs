@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApp.Models;
 
 namespace WebApp.Controllers
 {
@@ -6,6 +7,7 @@ namespace WebApp.Controllers
 	{
 		public IActionResult Index()
 		{
+			var products = ProductsRepository.GetProducts();
 			return View();
 		}
 	}
