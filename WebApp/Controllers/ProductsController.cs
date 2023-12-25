@@ -8,7 +8,7 @@ namespace WebApp.Controllers
 		public IActionResult Index()
 		{
 			var products = ProductsRepository.GetProducts(loadCategory: true);
-			return View();
+			return View(products);
 		}
 	}
 }
