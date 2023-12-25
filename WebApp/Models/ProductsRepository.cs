@@ -28,11 +28,12 @@
                 if(_products != null && _products.Count > 0)
                 {
                     _products.ForEach(x =>
-                    {   
-                        if(x.CategoryId.HasValue)
-                            x.Category = CategoriesRepository.GetCategoryById(x.CategoryId.Value)
+                    {
+                        if (x.CategoryId.HasValue)
+                            x.Category = CategoriesRepository.GetCategoryById(x.CategoryId.Value);
                     });
-                }   
+                }
+                return _products??new List<Product>();
             }
         }
 

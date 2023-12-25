@@ -21,7 +21,7 @@
             @foreach (var product in Model)
             {
                 <tr>    
-                    <td>@product.Name</td>
+                    <td>@product.Category?.Name</td>
                     <td>@product.Name</td>
                     <td>@product.Price?.ToString("c")</td>
                     <td>@product.Quantity</td>
