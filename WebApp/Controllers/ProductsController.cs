@@ -31,7 +31,7 @@ namespace WebApp.Controllers
 				ProductsRepository.AddProduct(productViewModel.Product);
 				return RedirectToAction(nameof(Index));
 			}
-
+			ViewBag.Action = "add";
 			productViewModel.Categories = CategoriesRepository.GetCategories();
 			return View(productViewModel);
 		}
@@ -56,7 +56,7 @@ namespace WebApp.Controllers
 				ProductsRepository.UpdateProduct(productViewModel.Product.ProductId, productViewModel.Product); 
 				return RedirectToAction(nameof (Index));
 			}
-
+			ViewBag.Action = "edit";
 			productViewModel.Categories = CategoriesRepository.GetCategories();
 			return View(productViewModel);
 		}
