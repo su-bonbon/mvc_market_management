@@ -30,6 +30,8 @@ namespace WebApp.Controllers
 				ProductsRepository.AddProduct(productViewModel.Product);
 				return RedirectToAction(nameof(Index));
 			}
+
+			return View(productViewModel);
 		}
 	}
 }

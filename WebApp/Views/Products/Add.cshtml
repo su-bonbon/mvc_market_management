@@ -5,6 +5,7 @@
 }
 
 <form method="post" asp-controller="products" asp-action="add">
+	<div class="text-danger" asp-validation-summary="All"></div>
 	<div class="mb-3 row">
 		<div class="col-2">
 			<label asp-for="Product.CategoryId" class="col-form-label"></label>
@@ -23,6 +24,10 @@
 		</div>
 	</div>
 
+	<div class="col">
+		<span class="text-danger" asp-validation-for="Product.CategoryId"></span>
+	</div>
+
 	<div class="mb-3 row">
 		<div class="col-2">
 			<label asp-for="Product.Name" class="col-form-label"></label>
@@ -30,6 +35,10 @@
 		<div class="col-6">
 			<input type="test" asp-for="Product.Name" class="form-control" />
 		</div>
+	</div>
+
+	<div class="col">
+		<span class="text-danger" asp-validation-for="Product.Name"></span>
 	</div>
 
 	<div class="mb-3 row">
@@ -41,6 +50,10 @@
 		</div>
 	</div>
 
+	<div class="col">
+		<span class="text-danger" asp-validation-for="Product.Price"></span>
+	</div>
+
 	<div class="mb-3 row">
 		<div class="col-2">
 			<label asp-for="Product.Quantity" class="col-form-label"></label>
@@ -48,6 +61,10 @@
 		<div class="col-6">
 			<input type="number" asp-for="Product.Quantity" class="form-control" min="1" />
 		</div>
+	</div>
+
+	<div class="col">
+		<span class="text-danger" asp-validation-for="Product.Quantity"></span>
 	</div>
 
 	<div class="mb-3 row">
