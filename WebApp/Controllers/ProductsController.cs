@@ -21,5 +21,15 @@ namespace WebApp.Controllers
 
 			return View(productViewModel);
 		}
+
+		[HttpPost]
+		public IActionResult Add(ProductViewModel productViewModel)
+		{
+			if (ModelState.IsValid)
+			{
+				ProductsRepository.AddProduct(productViewModel.Product);
+				return RedirectToAction(nameof(Index));
+			}
+		}
 	}
 }
