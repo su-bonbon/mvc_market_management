@@ -14,6 +14,7 @@ namespace WebApp.Controllers
 
 		public IActionResult Add()
 		{
+			ViewBag.Action = "add";
 			var productViewModel = new ProductViewModel
 			{
 				Categories = CategoriesRepository.GetCategories()
@@ -37,6 +38,7 @@ namespace WebApp.Controllers
 
 		public IActionResult Edit(int id) 
 		{
+			ViewBag.Action = "edit";
 			var productViewModel = new ProductViewModel
 			{
 				Product = ProductsRepository.GetProductById(id) ?? new Product(),
