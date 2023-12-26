@@ -31,6 +31,7 @@ namespace WebApp.Controllers
 				return RedirectToAction(nameof(Index));
 			}
 
+			productViewModel.Categories = CategoriesRepository.GetCategories();
 			return View(productViewModel);
 		}
 	}
