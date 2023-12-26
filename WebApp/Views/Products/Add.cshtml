@@ -12,11 +12,14 @@
 		<div class="col-6">
 			<select asp-for="Product.CategoryId" class="form-control">
 				<option>- Please Select -</option>
+				@if (Model.Categories != null && Model.Categories.Count() > 0)
+				{
+					@foreach (var cat in Model.Categories)
+					{
+								<option value="@cat.CategoryId">@cat.Name</option>
+					}
+				}
 			</select>
-			@foreach (var cat in Model.Categories)
-			{
-				<option value="@cat.CategoryId">@cat.Name</option>
-			}
 		</div>
 	</div>
 
