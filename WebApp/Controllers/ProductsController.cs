@@ -45,5 +45,18 @@ namespace WebApp.Controllers
 
 			return View(productViewModel);
 		}
+
+		[HttpPost]
+		public IActionResult Edit(ProductViewModel productViewModel)
+		{
+			if (ModelState.IsValid)
+			{
+				ProductsRepository.UpdateProduct(productViewModel.Product.ProductId, productViewModel.Product); 
+				return RedirectToAction(nameof (Index));
+			}
+
+			productViewModel.Categories = CategoriesRepository.GetCategories();
+			return View(productViewModel);
+		}
 	}
 }
