@@ -12,7 +12,7 @@ namespace WebApp.Controllers
             {
                 Categories = CategoriesRepository.GetCategories()
             };
-            return View();
+            return View(salesViewModel);
         }
     }
 }
