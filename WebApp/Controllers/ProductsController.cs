@@ -69,7 +69,7 @@ namespace WebApp.Controllers
 
 		public IActionResult ProductByCategoryPartial(int categoryId)
 		{
-			var products = ProductsRepository.GetProductByCategoryId(categoryId);
+			var products = ProductsRepository.GetProductsByCategoryId(categoryId);
 			return PartialView("_Products", products);
 		}
 	}
