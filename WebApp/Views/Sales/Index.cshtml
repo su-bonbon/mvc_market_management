@@ -49,9 +49,10 @@
 			})
 
 			// Handle product selection
-			@('#productsPartial').on('click', '.product-row', function() {
+			$('#productsPartial').on('click', '.product-row', function() {
 				// Highlight the row selected
-
+				$('product-row').removeClass('highlight');
+				$(this).addClass('highlight');
 			});
 		});
 	</script>
