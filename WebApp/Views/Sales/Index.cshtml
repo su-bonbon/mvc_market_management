@@ -44,7 +44,7 @@
 	<script>
 		$(function () {
 			// Handle category selection
-			$("#SelectedCategoryID").on("change", function() {
+			$("#SelectedCategoryId").on("change", function () {
 				$("#productsPartial").load("/products/ProductsByCategoryPartial", { categoryId: $(this).val() });
 			})
 		});
