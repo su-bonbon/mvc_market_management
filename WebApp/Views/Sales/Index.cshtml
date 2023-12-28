@@ -25,7 +25,7 @@
 			}
 		</select>
 		<br />
-		<div>
+		<div id="productsPartial">
 			@* Product List *@
 			<br />
 		</div>
@@ -39,3 +39,14 @@
 		@* List of transactions *@
 	</div>
 </div>
+
+@section Scripts {
+	<script>
+		$(function () {
+			// Handle category selection
+			$("#SelectedCategoryID").on("change", function() {
+				$("#productsPartial").load("/products/ProductsByCategoryPartial", { categoryId: $(this).val() });
+			})
+		});
+	</script>
+}
