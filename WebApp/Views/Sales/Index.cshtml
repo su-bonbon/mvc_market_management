@@ -27,11 +27,9 @@
 		<br />
 		<div id="productsPartial">
 			@* Product List *@
-			<br />
 		</div>
-		<div>
+		<div id="productDetailPartial">
 			@* Product Details *@
-			<br />
 		</div>
 		@* Sales Form*@
 	</div>
@@ -46,17 +44,21 @@
 			// Handle category selection
 			$("#SelectedCategoryId").on("change", function () {
 				$("#productsPartial").load("/products/ProductsByCategoryPartial", { categoryId: $(this).val() });
+				$("#productDetailPartial").html("");
 			})
 
 			// Handle product selection
 			$('#productsPartial').on('click', '.product-row', function() {
+
 				// Highlight the row selected
-				$('product-row').removeClass('highlight');
+				$('.product-row').removeClass('highlight');
 				$(this).addClass('highlight');
 
 				// Get the product ID from the "product-id" attribute of the clicked row
 				var productId = $(this).attr('product-id');
 
+
+				$("#productDetailPartial").load("/sales/SellProductPartial", { productId: productId});
 			});
 
 			
