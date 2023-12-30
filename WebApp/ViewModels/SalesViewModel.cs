@@ -1,4 +1,5 @@
-﻿using WebApp.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using WebApp.Models;
 
 namespace WebApp.ViewModels
 {
@@ -9,6 +10,7 @@ namespace WebApp.ViewModels
 
 		public int SelectedProductId { get; set; }
 
+		[Display(Name = "Quantity")]
 		public int QuantityToSell { get; set; }
 	}
 }
