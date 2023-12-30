@@ -25,14 +25,14 @@ namespace WebApp.Controllers
 
         public IActionResult Sell(SalesViewModel salesViewModel)
         {
-            if (ModelState.IsValid)
-            {
+			if (ModelState.IsValid)
+			{
                 // Sell the product
             }
 
             var product = ProductsRepository.GetProductById(salesViewModel.SelectedProductId);
-            salesViewModel.SelectedCategoryId = (product?.CategoryId == null)? 0 : product.CategoryId.Value;
-            salesViewModel.Categories = CategoriesRepository.GetCategories();
+			salesViewModel.SelectedCategoryId = (product?.CategoryId == null) ? 0 : product.CategoryId.Value;
+			salesViewModel.Categories = CategoriesRepository.GetCategories();
 
             return View("Index", salesViewModel);
         }
