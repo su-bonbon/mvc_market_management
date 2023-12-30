@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
+using System.Security.Cryptography.X509Certificates;
 using WebApp.Models;
 using WebApp.ViewModels;
 
@@ -27,6 +29,10 @@ namespace WebApp.Controllers
             {
                 // Sell the product
             }
+
+            var product = ProductsRepository.GetProductById(salesViewModel.SelectedProductId);
+            salesViewModel.SelectedCategoryId = (product?.CategoryId == null) ? 0 : product.CategoryId.Value;
+            salesViewModel.Categories = CategoriesRepository.GetCategories();
 
             return View("Index", salesViewModel);
         }
