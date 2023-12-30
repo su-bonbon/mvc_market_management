@@ -57,6 +57,12 @@
 			$("#formSale").hide();
 			$("#QuantityToSell").val("");
 
+			// Load the products if category is already selected
+			var selectedCategoryId = $("#SelectedCategoryId").val();
+			if (selectedCategoryId > 0) {
+
+			}
+
 
 			// Handle category selection
 			$("#SelectedCategoryId").on("change", function () {
@@ -87,8 +93,11 @@
 					$("#formSale").hide();
 				}
 			});
-
 			
 		});
+
+		function loadProducts(categoryId) {
+
+		}
 	</script>
 }
