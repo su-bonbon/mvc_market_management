@@ -51,10 +51,17 @@
 @section Scripts {
 	<script>
 		$(function () {
+
+			// Initialize the form
+			$("#formSale").hide();
+			$("#QuantityToSell").val("");
+
+
 			// Handle category selection
 			$("#SelectedCategoryId").on("change", function () {
 				$("#productsPartial").load("/products/ProductsByCategoryPartial", { categoryId: $(this).val() });
 				$("#productDetailPartial").html("");
+				$("#formSale").hide();
 			})
 
 			// Handle product selection
@@ -69,6 +76,15 @@
 
 
 				$("#productDetailPartial").load("/sales/SellProductPartial", { productId: productId});
+
+				if (productId > 0) {
+					$("SelectedProductId").val(productId);
+					$("#formSale").show();
+				}
+				else {
+					$("SelectedProductId").val("");
+					$("#formSale").hide();
+				}
 			});
 
 			
