@@ -20,5 +20,15 @@ namespace WebApp.Controllers
             var product = ProductsRepository.GetProductById(productId);
             return PartialView("_SellProduct", product);
         }
+
+        public IActionResult Sell(SalesViewModel salesViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                // Sell the product
+            }
+
+            return View("Index", salesViewModel);
+        }
     }
 }

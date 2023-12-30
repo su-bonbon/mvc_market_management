@@ -13,6 +13,7 @@
 <br />
 <div class="row">
 	<div class="col-4">
+		<div class="text-danger" asp-validation-summary="All"></div>
 		@* Category selection *@
 		<select asp-for="SelectedCategoryId" class="form-control">
 				<option>- Please Select -</option>
@@ -35,7 +36,7 @@
 		<form method="post" asp-controller="sales" asp-action="sell" itemid="formSale">
 			<div class="form-group">
 				<label asp-for="QuantityToSell"></label>
-				<input asp-for="QuantityToSell" class="form-control" type="number" min="1" />
+				<input asp-for="QuantityToSell" class="form-control" type="number" />
 			</div>
 			<br />
 			<div class="form-group">
