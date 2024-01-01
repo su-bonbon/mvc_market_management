@@ -1,14 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApp.Models;
 
 namespace WebApp.ViewComponents
 {
 	[ViewComponent]
 	public class TransactionsViewComponent : ViewComponent
 	{
-		public string Invoke()
+		public IViewComponentResult Invoke(string userName)
 		{
-			//return View("");
-			return "List of Transactions";
+			var transactions = TransactionsRepository.GetByDayAndCashier(userName, DateTime.Now);
+
+
+			return View(transactions);
 		}
 	}
 }
