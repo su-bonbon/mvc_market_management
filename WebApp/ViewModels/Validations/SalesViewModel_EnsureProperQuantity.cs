@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using WebApp.Models;
 
 namespace WebApp.ViewModels.Validations
 {
@@ -11,7 +12,22 @@ namespace WebApp.ViewModels.Validations
 			{
 				if(salesViewModel.QuantityToSell <= 0)
 				{
-					return new ValidationResult("The quantity to sell has to be greater than zero");
+					return new ValidationResult("The quantity to sell has to be greater than zero.");
+				}
+				else
+				{
+					var product = ProductsRepository.GetProductById(salesViewModel.SelectedProductId);
+					if (product != null)
+					{
+						if (product.Quantity < salesViewModel.QuantityToSell)
+						{
+							return new ValidationResult($"{product.Name} only has {product.Quantity} left.");
+						}
+					}
+					else
+					{
+						return new ValidationResult("The selected product doesn't exist.");
+					}
 				}
 			}
 			return ValidationResult.Success;
