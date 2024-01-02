@@ -15,12 +15,12 @@ namespace WebApp.Controllers
 		public IActionResult Search(TransactionsViewModel transactionsViewModel)
 		{
 			var transactions = TransactionsRepository.Search(
-				TransactionsViewModel.CashierName??string.Empty,
-				TransactionsViewModel.StartDate,
-				TransactionsViewModel.EndDate);
+                transactionsViewModel.CashierName ?? string.Empty,
+                transactionsViewModel.StartDate,
+                transactionsViewModel.EndDate);
 
 			transactionsViewModel.Transactions = transactions; 
-			return View(transactionsViewModel);
+			return View("Index", transactionsViewModel);
 		}
 	}
 }
