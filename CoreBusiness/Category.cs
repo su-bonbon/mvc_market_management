@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CoreBusiness
+namespace WebApp.Models
 {
     public class Category
     {
