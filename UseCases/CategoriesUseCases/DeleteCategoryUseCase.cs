@@ -7,17 +7,17 @@ using UseCases.DataStorePluginInterfaces;
 
 namespace UseCases.CategoriesUseCases
 {
-    public class DeleteCategoriesUseCases
+    public class DeleteCategoryUseCase
     {
         private readonly ICategoryRepository categoryRepository;
 
-        public DeleteCategoriesUseCases(ICategoryRepository categoryRepository)
+        public DeleteCategoryUseCase(ICategoryRepository categoryRepository)
         {
             this.categoryRepository = categoryRepository;
         }
         public void Execute(int categoryId)
         {
-            categoryRepository.DeleteCategoty(categoryId);
+            categoryRepository.DeleteCategory(categoryId);
         }
     }
 }
