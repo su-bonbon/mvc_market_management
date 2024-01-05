@@ -1,4 +1,4 @@
-﻿namespace WebApp.Models
+﻿namespace CoreBusiness
 {
 	public class Transaction
 	{
