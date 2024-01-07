@@ -5,7 +5,7 @@ namespace Plugins.DataStore.InMemory
 {
     public class CategoriesInMemoryRepository : ICategoryRepository
     {
-        private static List<Category> _categories = new List<Category>()
+        private List<Category> _categories = new List<Category>()
         {
             new Category { CategoryId = 1, Name = "Beverage", Description = "Beverage" },
             new Category { CategoryId = 2, Name = "Bakery", Description = "Bakery" },
@@ -65,6 +65,5 @@ namespace Plugins.DataStore.InMemory
                 _categories.Remove(category);
             }
         }
-
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using UseCases.CategoriesUseCases;
-using WebApp.Models;
+using CoreBusiness;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApp.Controllers
 {
