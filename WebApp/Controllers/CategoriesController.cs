@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using UseCases.CategoriesUseCases;
+using WebApp.Models;
 using CoreBusiness;
-using Microsoft.AspNetCore.Authorization;
 
 namespace WebApp.Controllers
 {
@@ -9,9 +9,18 @@ namespace WebApp.Controllers
     {
         private readonly IViewCategoriesUseCase viewCategoriesUseCase;
 
-        public CategoriesController(IViewCategoriesUseCase viewCategoriesUseCase) 
+        public CategoriesController(
+            IViewCategoriesUseCase viewCategoriesUseCase,
+            IViewSelectedCategoryUseCase viewSelectedCategoryUseCase,
+            IEditCategoryUseCase editCategoryUseCase,
+            IAddCategoryUseCase addCategoryUseCase,
+            IDeleteCategoryUseCase deleteCategoryUseCase)
         {
             this.viewCategoriesUseCase = viewCategoriesUseCase;
+            this.viewSelectedCategoryUseCase = viewSelectedCategoryUseCase;
+            this.editCategoryUseCase = editCategoryUseCase;
+            this.addCategoryUseCase = addCategoryUseCase;
+            this.deleteCategoryUseCase = deleteCategoryUseCase;
         }
         public IActionResult Index()
         {
@@ -23,7 +32,7 @@ namespace WebApp.Controllers
         public IActionResult Edit([FromRoute]int? id)
         {
             ViewBag.Action = "edit";
-            var category = CategoriesRepository.GetCategoryById(id.HasValue? id.Value : 0);
+            var category = viewSelectedCategoryUseCase.Execute(id.HasValue ? id.Value : 0);
             return View(category);
         }
 
@@ -32,8 +41,8 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-				CategoriesRepository.UpdateCategory(category.CategoryId, category);
-				return RedirectToAction(nameof(Index));
+                editCategoryUseCase.Execute(category.CategoryId, category);
+                return RedirectToAction(nameof(Index));
 			}
 			ViewBag.Action = "edit";
 			return View(category);
@@ -51,8 +60,8 @@ namespace WebApp.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				CategoriesRepository.AddCategory(category);
-				return RedirectToAction(nameof(Index));
+                addCategoryUseCase.Execute(category);
+                return RedirectToAction(nameof(Index));
 			}
 			ViewBag.Action = "add";
 			return View(category);
@@ -61,7 +70,7 @@ namespace WebApp.Controllers
 		[HttpGet]
 		public IActionResult Delete(int categoryId)
         {
-            CategoriesRepository.DeleteCategory(categoryId);
+            deleteCategoryUseCase.Execute(categoryId);
             return RedirectToAction(nameof(Index));
         }
 	}
