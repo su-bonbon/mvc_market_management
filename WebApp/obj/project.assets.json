@@ -1,11 +1,72 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "CoreBusiness/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/CoreBusiness.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CoreBusiness.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Plugins.DataStore.InMemory/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "CoreBusiness": "1.0.0",
+          "UseCases": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Plugins.DataStore.InMemory.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Plugins.DataStore.InMemory.dll": {}
+        }
+      },
+      "UseCases/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "CoreBusiness": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UseCases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UseCases.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CoreBusiness/1.0.0": {
+      "type": "project",
+      "path": "../CoreBusiness/CoreBusiness.csproj",
+      "msbuildProject": "../CoreBusiness/CoreBusiness.csproj"
+    },
+    "Plugins.DataStore.InMemory/1.0.0": {
+      "type": "project",
+      "path": "Plugins/Plugins.DataStore.InMemory/Plugins.DataStore.InMemory.csproj",
+      "msbuildProject": "Plugins/Plugins.DataStore.InMemory/Plugins.DataStore.InMemory.csproj"
+    },
+    "UseCases/1.0.0": {
+      "type": "project",
+      "path": "../UseCases/UseCases.csproj",
+      "msbuildProject": "../UseCases/UseCases.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "CoreBusiness >= 1.0.0",
+      "Plugins.DataStore.InMemory >= 1.0.0",
+      "UseCases >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Bill Bonnaud\\.nuget\\packages\\": {}
@@ -33,7 +94,17 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Bill Bonnaud\\Desktop\\mvc_proj1\\CoreBusiness\\CoreBusiness.csproj": {
+              "projectPath": "C:\\Users\\Bill Bonnaud\\Desktop\\mvc_proj1\\CoreBusiness\\CoreBusiness.csproj"
+            },
+            "C:\\Users\\Bill Bonnaud\\Desktop\\mvc_proj1\\UseCases\\UseCases.csproj": {
+              "projectPath": "C:\\Users\\Bill Bonnaud\\Desktop\\mvc_proj1\\UseCases\\UseCases.csproj"
+            },
+            "C:\\Users\\Bill Bonnaud\\Desktop\\mvc_proj1\\WebApp\\Plugins\\Plugins.DataStore.InMemory\\Plugins.DataStore.InMemory.csproj": {
+              "projectPath": "C:\\Users\\Bill Bonnaud\\Desktop\\mvc_proj1\\WebApp\\Plugins\\Plugins.DataStore.InMemory\\Plugins.DataStore.InMemory.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
