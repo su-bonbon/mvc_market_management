@@ -1,13 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using UseCases.CategoriesUseCases;
-using WebApp.Models;
 using CoreBusiness;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApp.Controllers
 {
+    [Authorize(Policy = "Inventory")]
     public class CategoriesController : Controller
     {
         private readonly IViewCategoriesUseCase viewCategoriesUseCase;
+        private readonly IViewSelectedCategoryUseCase viewSelectedCategoryUseCase;
+        private readonly IEditCategoryUseCase editCategoryUseCase;
+        private readonly IAddCategoryUseCase addCategoryUseCase;
+        private readonly IDeleteCategoryUseCase deleteCategoryUseCase;
 
         public CategoriesController(
             IViewCategoriesUseCase viewCategoriesUseCase,
@@ -22,17 +27,19 @@ namespace WebApp.Controllers
             this.addCategoryUseCase = addCategoryUseCase;
             this.deleteCategoryUseCase = deleteCategoryUseCase;
         }
+
         public IActionResult Index()
         {
             var categories = viewCategoriesUseCase.Execute();
             return View(categories);
         }
 
-        [HttpGet]
-        public IActionResult Edit([FromRoute]int? id)
+        public IActionResult Edit(int? id)
         {
             ViewBag.Action = "edit";
+
             var category = viewSelectedCategoryUseCase.Execute(id.HasValue ? id.Value : 0);
+
             return View(category);
         }
 
@@ -43,35 +50,37 @@ namespace WebApp.Controllers
             {
                 editCategoryUseCase.Execute(category.CategoryId, category);
                 return RedirectToAction(nameof(Index));
-			}
-			ViewBag.Action = "edit";
-			return View(category);
+            }
+
+            ViewBag.Action = "edit";
+            return View(category);
         }
 
-		[HttpGet]
-		public IActionResult Add()
-		{
+        public IActionResult Add()
+        {
             ViewBag.Action = "add";
-			return View();
-		}
 
-		[HttpPost]
-		public IActionResult Add([FromForm]Category category)
-		{
-			if (ModelState.IsValid)
-			{
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Add(Category category)
+        {
+            if (ModelState.IsValid)
+            {
                 addCategoryUseCase.Execute(category);
                 return RedirectToAction(nameof(Index));
-			}
-			ViewBag.Action = "add";
-			return View(category);
-		}
+            }
 
-		[HttpGet]
-		public IActionResult Delete(int categoryId)
+            ViewBag.Action = "add";
+            return View(category);
+        }
+
+        public IActionResult Delete(int categoryId)
         {
             deleteCategoryUseCase.Execute(categoryId);
             return RedirectToAction(nameof(Index));
         }
-	}
+
+    }
 }

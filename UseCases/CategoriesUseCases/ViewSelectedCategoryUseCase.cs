@@ -8,7 +8,7 @@ using UseCases.DataStorePluginInterfaces;
 
 namespace UseCases.CategoriesUseCases
 {
-    public class ViewSelectedCategoryUseCase
+    public class ViewSelectedCategoryUseCase : IViewSelectedCategoryUseCase
     {
         private readonly ICategoryRepository categoryRepository;
 
@@ -16,6 +16,7 @@ namespace UseCases.CategoriesUseCases
         {
             this.categoryRepository = categoryRepository;
         }
+
         public Category? Execute(int categoryId)
         {
             return categoryRepository.GetCategoryById(categoryId);
