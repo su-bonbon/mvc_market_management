@@ -88,6 +88,9 @@
             "projectReferences": {
               "C:\\Users\\Bill Bonnaud\\Desktop\\mvc_proj1\\CoreBusiness\\CoreBusiness.csproj": {
                 "projectPath": "C:\\Users\\Bill Bonnaud\\Desktop\\mvc_proj1\\CoreBusiness\\CoreBusiness.csproj"
+              },
+              "C:\\Users\\Bill Bonnaud\\Desktop\\mvc_proj1\\UseCases\\UseCases.csproj": {
+                "projectPath": "C:\\Users\\Bill Bonnaud\\Desktop\\mvc_proj1\\UseCases\\UseCases.csproj"
               }
             }
           }
