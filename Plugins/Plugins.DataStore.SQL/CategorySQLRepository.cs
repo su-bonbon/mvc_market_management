@@ -8,7 +8,7 @@ using UseCases.DataStorePluginInterfaces;
 
 namespace Plugins.DataStore.SQL
 {
-    internal class CategorySQLRepository : ICategoryRepository
+    public class CategorySQLRepository : ICategoryRepository
     {
         private readonly MarketContext db;
 
