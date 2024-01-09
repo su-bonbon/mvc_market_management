@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Plugins.DataStore.SQL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3010302b2841649fa2397d81ed8397ce68540801")]
 [assembly: System.Reflection.AssemblyProductAttribute("Plugins.DataStore.SQL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Plugins.DataStore.SQL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,22 +1,25 @@
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 using Plugins.DataStore.InMemory;
+using Plugins.DataStore.SQL;
 using System.Net.Mime;
 using System.Text;
 using UseCases;
 using UseCases.CategoriesUseCases;
 using UseCases.DataStorePluginInterfaces;
 using UseCases.ProductsUseCases;
-using WebApp.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<MarketContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MarketManagement"));
+});
 
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddSingleton<ICategoryRepository, CategoriesInMemoryRepository>();
 builder.Services.AddSingleton<IProductRepository, ProductsInMemoryRepository>();
 builder.Services.AddSingleton<ITransactionRepository, TransactionsInMemoryRepository>();
-
-
 
 builder.Services.AddTransient<IViewCategoriesUseCase, ViewCategoriesUseCase>();
 builder.Services.AddTransient<IViewSelectedCategoryUseCase, ViewSelectedCategoryUseCase>();
