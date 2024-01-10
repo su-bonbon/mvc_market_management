@@ -1,2 +1,0 @@
-C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\bin\Debug\net8.0\WebApp.exe
-C:\Users\Bill Bonnaud\Desktop\mvc_proj1\WebApp\bin\Debug\net8.0\WebApp.dll
