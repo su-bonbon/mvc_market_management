@@ -18,6 +18,7 @@ namespace WebApp.Controllers
         private readonly IViewSelectedProductUseCase viewSelectedProductUseCase;
         private readonly IViewProductsUseCase viewProductsUseCase;
         private readonly IViewCategoriesUseCase viewCategoriesUseCase;
+        private readonly IViewProductsInCategoryUseCase viewProductsInCategoryUseCase;
 
         public ProductsController(
             IAddProductUseCase addProductUseCase,
@@ -25,7 +26,8 @@ namespace WebApp.Controllers
             IDeleteProductUseCase deleteProductUseCase,
             IViewSelectedProductUseCase viewSelectedProductUseCase,
             IViewProductsUseCase viewProductsUseCase,
-            IViewCategoriesUseCase viewCategoriesUseCase)
+            IViewCategoriesUseCase viewCategoriesUseCase,
+            IViewProductsInCategoryUseCase viewProductsInCategoryUseCase)
         {
             this.addProductUseCase = addProductUseCase;
             this.editProductUseCase = editProductUseCase;
@@ -33,6 +35,7 @@ namespace WebApp.Controllers
             this.viewSelectedProductUseCase = viewSelectedProductUseCase;
             this.viewProductsUseCase = viewProductsUseCase;
             this.viewCategoriesUseCase = viewCategoriesUseCase;
+            this.viewProductsInCategoryUseCase = viewProductsInCategoryUseCase;
         }
 
         public IActionResult Index()
