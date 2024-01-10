@@ -3058,8 +3058,8 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "CoreBusiness": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "8.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.1",
           "UseCases": "1.0.0"
         },
         "compile": {

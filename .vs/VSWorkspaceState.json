@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Plugins",
-    "\\Plugins\\Plugins.DataStore.InMemory",
-    "\\Plugins\\Plugins.DataStore.SQL",
-    "\\WebApp"
+    ""
   ],
-  "SelectedNode": "\\Plugins\\Plugins.DataStore.SQL\\MarketContext.cs",
+  "SelectedNode": "\\WebApp.sln",
   "PreviewInSolutionExplorer": false
 }
