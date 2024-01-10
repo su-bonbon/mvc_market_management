@@ -21,3 +21,5 @@ C:\Users\Bill Bonnaud\Desktop\mvc_proj1\Plugins\Plugins.DataStore.SQL\obj\Debug\
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\Plugins\Plugins.DataStore.SQL\obj\Debug\net8.0\Plugins.DataStore.SQL.pdb
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\Plugins\Plugins.DataStore.SQL\obj\Debug\net8.0\Plugins.DataStore.SQL.genruntimeconfig.cache
 C:\Users\Bill Bonnaud\Desktop\mvc_proj1\Plugins\Plugins.DataStore.SQL\obj\Debug\net8.0\ref\Plugins.DataStore.SQL.dll
+C:\Users\Bill Bonnaud\Desktop\mvc_proj1\Plugins\Plugins.DataStore.SQL\bin\Debug\net8.0\UseCases.dll
+C:\Users\Bill Bonnaud\Desktop\mvc_proj1\Plugins\Plugins.DataStore.SQL\bin\Debug\net8.0\UseCases.pdb
