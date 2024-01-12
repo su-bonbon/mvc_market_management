@@ -26,7 +26,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
-
+// Add user policy
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("Inventory", p => p.RequireClaim("Position", "Inventory"));
